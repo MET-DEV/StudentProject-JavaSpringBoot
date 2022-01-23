@@ -1,5 +1,0 @@
-package com.metsoft.students.service.interfaces;
-
-public interface StudentService {
-
-}
