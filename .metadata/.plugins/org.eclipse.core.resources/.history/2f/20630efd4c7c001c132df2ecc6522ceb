@@ -1,0 +1,42 @@
+package com.metsoft.students.service.implementation;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.metsoft.students.model.OutInfo;
+import com.metsoft.students.model.OutInfoWithData;
+import com.metsoft.students.model.Student;
+import com.metsoft.students.repository.StudentRepository;
+import com.metsoft.students.service.interfaces.StudentService;
+
+@Service
+public class StudentServiceImp implements StudentService{
+	private StudentRepository studentRepo;
+	@Autowired
+	public StudentServiceImp(StudentRepository studentRepo) {
+		this.studentRepo=studentRepo;
+	}
+	@Override
+	public OutInfoWithData<List<Student>> getStudents() {
+		List<Student> students=studentRepo.findAll();
+		return new OutInfoWithData<List<Student>>("Data listed for you <3", true, students);
+	}
+	@Override
+	public OutInfo add(Student student) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public OutInfo update(Student student) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public OutInfo delete(Student student) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}

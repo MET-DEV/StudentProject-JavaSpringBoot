@@ -22,6 +22,7 @@ public class StudentsController {
 	public StudentsController(StudentService studentService) {
 		this.studentService = studentService;
 	}
+	//TEST COMMIT
 	@GetMapping("/getall")
 	public OutInfoWithData<List<Student>> getAll(){
 		return studentService.getStudents();

@@ -1,0 +1,17 @@
+package com.metsoft.students.model;
+
+import javax.persistence.Table;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Table(name = "universities")
+public class University {
+	private int id;
+	private String name;
+}

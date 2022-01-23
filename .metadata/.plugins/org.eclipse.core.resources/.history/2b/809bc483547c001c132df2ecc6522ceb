@@ -1,0 +1,12 @@
+package com.metsoft.students.entity;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
+
+@AllArgsConstructor
+public class OutInfo {
+
+	private String message;
+	private boolean status;
+}

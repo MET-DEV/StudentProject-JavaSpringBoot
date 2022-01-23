@@ -1,0 +1,5 @@
+package com.metsoft.students.repository;
+
+public interface UniversityRepository {
+
+}

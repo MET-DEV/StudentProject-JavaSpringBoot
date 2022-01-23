@@ -1,0 +1,17 @@
+package com.metsoft.students.service.interfaces;
+
+import java.util.List;
+
+import com.metsoft.students.entity.OutInfo;
+import com.metsoft.students.entity.OutInfoWithData;
+import com.metsoft.students.entity.Student;
+
+public interface StudentService {
+
+	OutInfoWithData<List<Student>> getStudents();
+	OutInfo add(Student student);
+	OutInfo update(Student student);
+	OutInfo delete(Student student);
+	
+	
+}
