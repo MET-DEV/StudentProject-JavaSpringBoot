@@ -9,7 +9,7 @@ import com.metsoft.students.models.Student;
 public interface StudentService {
 
 	OutInfoWithData<List<Student>> getStudents();
-	OutInfo add(Student student);
+	OutInfoWithData<Student>  add(Student student);
 	OutInfo update(Student student);
 	OutInfo delete(Student student);
 	

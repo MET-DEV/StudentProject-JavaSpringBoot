@@ -24,9 +24,9 @@ public class StudentServiceImp implements StudentService{
 		return new OutInfoWithData<List<Student>>("Data listed for you <3", true, students);
 	}
 	@Override
-	public OutInfo add(Student student) {
-		studentRepo.save(student);
-		return new OutInfo("Data added",true);
+	public OutInfoWithData<Student> add(Student student) {
+		Student studentDb=studentRepo.save(student);
+		return new OutInfoWithData<Student>("Data added",true,studentDb);
 	}
 	@Override
 	public OutInfo update(Student student) {
