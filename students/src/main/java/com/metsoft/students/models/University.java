@@ -1,17 +1,21 @@
 package com.metsoft.students.models;
 
 
+import java.util.List;
+
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
+import javax.persistence.OneToMany;
+
 import javax.persistence.Table;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreType;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -21,6 +25,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@JsonIgnoreType
 @Table(name = "universities")
 public class University {
 	@Id
@@ -30,8 +35,7 @@ public class University {
 	@Column(name = "universityname")
 	private String universityName;
 	
-	@OneToOne(mappedBy = "university")
-	@JsonIgnore
-	private Student student;
+	@OneToMany(mappedBy = "university")
+	private List<Student> students;
 	
 }
