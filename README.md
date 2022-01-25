@@ -5,6 +5,7 @@
 - [Service Interfaces (FOR IMPLEMENT SERVICE CLASSES)](https://github.com/MET-DEV/StudentProject-JavaSpringBoot/tree/master/students/src/main/java/com/metsoft/students/service/interfaces)
 - [Service Classes (FOR LOGIC STATES)](https://github.com/MET-DEV/StudentProject-JavaSpringBoot/tree/master/students/src/main/java/com/metsoft/students/service/implementation)
 - [Controller Classes](https://github.com/MET-DEV/StudentProject-JavaSpringBoot/tree/master/students/src/main/java/com/metsoft/students/controller)
+- [Test Classes](https://github.com/MET-DEV/UniversitiesProject-JavaSpringBoot/tree/master/students/src/test/java/com/metsoft/students)
 - [Config](https://github.com/MET-DEV/StudentProject-JavaSpringBoot/blob/master/students/src/main/resources/application.properties)
 - [Main Class](https://github.com/MET-DEV/StudentProject-JavaSpringBoot/blob/master/students/src/main/java/com/metsoft/students/StudentsApplication.java)
 
@@ -17,7 +18,9 @@
 - POSTGRESQL
 
 ## API's PATHS
+For  Swagger ``` http://localhost:8080/swagger-ui.html# ```  <br/>
 For Get All Products ```GET localhost:8080/api/students/getall ``` <br/>
 For Add Products ```POST localhost:8080/api/students/add ```  <br/>
 For Update Products ```POST localhost:8080/api/students/update ```  <br/>
 For Delete Products ```POST localhost:8080/api/students/delete ```  <br/>
+
