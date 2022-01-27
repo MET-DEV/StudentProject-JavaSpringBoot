@@ -7,4 +7,7 @@ import com.metsoft.students.models.University;
 
 public interface UniversityService {
 	OutInfoWithData<List<University>> getAll();
+	OutInfoWithData<University> add(University university);
+	OutInfoWithData<University> update(University university);
+	OutInfoWithData<University> delete(University university);
 }
