@@ -3,7 +3,9 @@ package com.metsoft.students.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -31,11 +33,11 @@ public class StudentsController {
 	public OutInfoWithData<Student>  add(@RequestBody Student student) {
 		return studentService.add(student);
 	}
-	@PostMapping("/update")
+	@PatchMapping("/update")
 	public OutInfo update(@RequestBody Student student) {
 		return studentService.update(student);
 	}
-	@PostMapping("/delete")
+	@DeleteMapping("/delete")
 	public OutInfo delete(@RequestBody Student student) {
 		return studentService.delete(student);
 	}
