@@ -19,8 +19,14 @@
 
 ## API's PATHS
 For  Swagger ``` http://localhost:8080/swagger-ui.html# ```  <br/>
+#### For Student Service </hr>
 For Get All Products ```GET localhost:8080/api/students/getall ``` <br/>
 For Add Products ```POST localhost:8080/api/students/add ```  <br/>
-For Update Products ```POST localhost:8080/api/students/update ```  <br/>
-For Delete Products ```POST localhost:8080/api/students/delete ```  <br/>
+For Update Products ```PATCH localhost:8080/api/students/update ```  <br/>
+For Delete Products ```DELETE localhost:8080/api/students/delete ```  <br/>
+#### For University Service 
+For Get All Universities ```GET localhost:8080/api/universities/getall ``` <br/>
+For Add Universities ```POST localhost:8080/api/universities/add ``` <br/>
+For Update Universities ```PATCH localhost:8080/api/universities/update ``` <br/>
+For Delete Universities ```DELETE localhost:8080/api/universities/delete ``` <br/>
 
