@@ -21,12 +21,14 @@
 For  Swagger ``` http://localhost:8080/swagger-ui.html# ```  <br/>
 #### For Student Service </hr>
 For Get All Students ```GET localhost:8080/api/students/getall ``` <br/>
+For Student By Id ```GET localhost:8080/api/students/getbyid/{id} ``` <br/>
 For Add Student ```POST localhost:8080/api/students/add ```  <br/>
 For Update Student ```PATCH localhost:8080/api/students/update ```  <br/>
 For Delete Student ```DELETE localhost:8080/api/students/delete ```  <br/>
 #### For University Service 
 For Get All Universities ```GET localhost:8080/api/universities/getall ``` <br/>
-For Add Universities ```POST localhost:8080/api/universities/add ``` <br/>
-For Update Universities ```PATCH localhost:8080/api/universities/update ``` <br/>
-For Delete Universities ```DELETE localhost:8080/api/universities/delete ``` <br/>
+For University By Id ```GET localhost:8080/api/universities/getbyid/{id} ``` <br/>
+For Add University ```POST localhost:8080/api/universities/add ``` <br/>
+For Update University ```PATCH localhost:8080/api/universities/update ``` <br/>
+For Delete University ```DELETE localhost:8080/api/universities/delete ``` <br/>
 
