@@ -5,8 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.metsoft.students.models.OutInfoWithData;
 import com.metsoft.students.models.University;
+import com.metsoft.students.models.servicemodel.OutInfoWithData;
 import com.metsoft.students.repository.UniversityRepository;
 import com.metsoft.students.service.interfaces.UniversityService;
 
@@ -37,6 +37,11 @@ public class UniversityServiceImp implements UniversityService{
 	public OutInfoWithData<University> delete(University university) {
 		universityRepository.delete(university);
 		return new OutInfoWithData<University>("Başarıyla Silindi", true, university);
+	}
+	@Override
+	public OutInfoWithData<University> getById(int id) {
+		University university=universityRepository.findById(id);
+		return new OutInfoWithData<University>("Veri getirildi", true, university);
 	}
 
 	

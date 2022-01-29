@@ -1,4 +1,4 @@
-package com.metsoft.students.models;
+package com.metsoft.students.models.servicemodel;
 
 
 import lombok.AllArgsConstructor;

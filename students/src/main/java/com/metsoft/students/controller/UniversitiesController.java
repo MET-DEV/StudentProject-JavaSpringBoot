@@ -6,13 +6,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.metsoft.students.models.OutInfoWithData;
 import com.metsoft.students.models.University;
+import com.metsoft.students.models.servicemodel.OutInfoWithData;
 import com.metsoft.students.service.interfaces.UniversityService;
 
 
@@ -29,6 +30,10 @@ public class UniversitiesController {
 	@GetMapping("/getall")
 	public OutInfoWithData<List<University>> getAll(){
 		return universityService.getAll();
+	}
+	@GetMapping("/getbyid/{id}")
+	public OutInfoWithData<University> getById(@PathVariable int id){
+		return universityService.getById(id);
 	}
 	@PostMapping("/add")
 	public OutInfoWithData<University> add(@RequestBody University university){
