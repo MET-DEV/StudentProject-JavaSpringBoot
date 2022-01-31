@@ -41,7 +41,7 @@ public class StudentServiceImp implements StudentService{
 	@Override
 	public OutInfoWithData<Student> getById(int id) {
 		Student student=studentRepo.findById(id);
-		return new OutInfoWithData<Student>("Veri getirildi", true, student);
+		return new OutInfoWithData<Student>("Data listed", true, student);
 	}
 	
 }

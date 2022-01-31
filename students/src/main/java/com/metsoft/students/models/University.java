@@ -38,4 +38,8 @@ public class University {
 	@JsonIgnore
 	private List<Student> students;
 	
+	@OneToMany(mappedBy = "university")
+	@JsonIgnore
+	private List<Academician> academicians;
+	
 }
