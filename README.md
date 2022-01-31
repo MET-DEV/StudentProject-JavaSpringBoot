@@ -31,4 +31,10 @@ For University By Id ```GET localhost:8080/api/universities/getbyid/{id} ``` <br
 For Add University ```POST localhost:8080/api/universities/add ``` <br/>
 For Update University ```PATCH localhost:8080/api/universities/update ``` <br/>
 For Delete University ```DELETE localhost:8080/api/universities/delete ``` <br/>
+#### For Academician Service 
+For Get All Academicians ```GET localhost:8080/api/academicians/getall ``` <br/>
+For Academician By Id ```GET localhost:8080/api/academicians/getbyid/{id} ``` <br/>
+For Add Academician ```POST localhost:8080/api/academicians/add ``` <br/>
+For Update Academician ```PATCH localhost:8080/api/academicians/update ``` <br/>
+For Delete Academician ```DELETE localhost:8080/api/academicians/delete ``` <br/>
 
