@@ -31,7 +31,7 @@ public class AcademiciansController {
 	public OutInfoWithData<List<Academician>> getAll(){
 		return academicianService.getAll();
 	}
-	@GetMapping("/getall/{id}")
+	@GetMapping("/getbyid/{id}")
 	public OutInfoWithData<Academician> getById(@PathVariable int id){
 		return academicianService.getById(id);
 	}
