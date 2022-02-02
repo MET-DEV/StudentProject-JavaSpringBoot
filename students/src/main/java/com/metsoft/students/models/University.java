@@ -13,6 +13,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
 import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -32,6 +33,7 @@ public class University {
 	@Column(name = "id")
 	private int id;
 	@Column(name = "universityname")
+	@NotBlank(message = "Üniversite adı boş bırakılamaz")
 	private String universityName;
 	
 	@OneToMany(mappedBy = "university")
