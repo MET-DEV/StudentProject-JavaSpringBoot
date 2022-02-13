@@ -37,4 +37,10 @@ For Academician By Id ```GET localhost:8080/api/academicians/getbyid/{id} ``` <b
 For Add Academician ```POST localhost:8080/api/academicians/add ``` <br/>
 For Update Academician ```PATCH localhost:8080/api/academicians/update ``` <br/>
 For Delete Academician ```DELETE localhost:8080/api/academicians/delete ``` <br/>
+#### For Attendant Service 
+For Get All Attendants ```GET localhost:8080/api/attendants/getall ``` <br/>
+For Attendant By Id ```GET localhost:8080/api/attendants/getbyid/{id} ``` <br/>
+For Add Attendant ```POST localhost:8080/api/attendants/add ``` <br/>
+For Update Attendant ```PATCH localhost:8080/api/attendants/update ``` <br/>
+For Delete Attendant ```DELETE localhost:8080/api/attendants/delete ``` <br/>
 
