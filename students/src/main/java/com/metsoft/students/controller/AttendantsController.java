@@ -15,18 +15,22 @@ import org.springframework.web.bind.annotation.RestController;
 import com.metsoft.students.models.Attendant;
 import com.metsoft.students.models.servicemodel.OutInfo;
 import com.metsoft.students.models.servicemodel.OutInfoWithData;
+import com.metsoft.students.repository.AttendantRepository;
 import com.metsoft.students.service.interfaces.AttendantService;
 
 @RestController
 @RequestMapping("/api/attendants")
 public class AttendantsController {
 	private AttendantService attendantService;
+
 	
 	@Autowired
-	public AttendantsController(AttendantService attendantService) {
+	public AttendantsController(AttendantService attendantService,AttendantRepository repo) {
 		super();
 		this.attendantService = attendantService;
+
 	}
+
 	@GetMapping("/getall")
 	public OutInfoWithData<List<Attendant>> getAll(){
 		return attendantService.getAll();

@@ -1,8 +1,11 @@
 package com.metsoft.students.service.implementation;
 
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.metsoft.students.models.Attendant;
@@ -12,13 +15,19 @@ import com.metsoft.students.repository.AttendantRepository;
 import com.metsoft.students.service.interfaces.AttendantService;
 
 @Service
-public class AttendantServiceImp implements AttendantService{
+public class AttendantServiceImp implements  AttendantService{
 
 	private AttendantRepository attendantRepository;
+	
 	@Autowired
-	public AttendantServiceImp(AttendantRepository attendantRepository) {
+	private BCryptPasswordEncoder passEncoder;
+	
+	
+	@Autowired
+	public AttendantServiceImp(AttendantRepository attendantRepository,BCryptPasswordEncoder passEncoder) {
 		super();
 		this.attendantRepository = attendantRepository;
+		
 	}
 	@Override
 	public OutInfoWithData<List<Attendant>> getAll() {
@@ -32,6 +41,7 @@ public class AttendantServiceImp implements AttendantService{
 	}
 	@Override
 	public OutInfoWithData<Attendant> add(Attendant attendant) {
+		attendant.setPassword(passEncoder.encode(attendant.getPassword()));
 		return new OutInfoWithData<Attendant>("added", true, attendantRepository.save(attendant));
 	}
 	@Override
@@ -44,5 +54,6 @@ public class AttendantServiceImp implements AttendantService{
 		attendantRepository.delete(attendant);
 		return new OutInfo("deleted", true);
 	}
+	
 	
 }

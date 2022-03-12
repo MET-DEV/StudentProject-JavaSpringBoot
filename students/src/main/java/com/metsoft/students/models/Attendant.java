@@ -25,15 +25,18 @@ public class Attendant {
 	@Column(name = "first_name")
 	private String firstName;
 	
-	@Column(name = "lastName")
+	@Column(name = "last_name")
 	private String lastName;
+	
+	@Column(name = "user_name")
+	private String username;
 	
 	@Column(name = "nationality_number")
 	private String nationalityNumber;
 	
 	@Column(name = "email")
-	private int email;
+	private String email;
 	
 	@Column(name = "password")
-	private int password;
+	private String password;
 }
